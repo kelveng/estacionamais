@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node ace build --production",
-    "start": "node server.js",
-    "dev": "node ace serve --watch",
+    "build": "ENV_SILENT=true node ace build --production --ignore-ts-errors",
+    "start1": "node ace serve --watch",
+    "start": "ENV_SILENT=true node build/server.js",
     "lint": "eslint . --ext=.ts"
   },
   "devDependencies": {
